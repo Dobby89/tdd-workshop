@@ -31,4 +31,9 @@ describe('Greet', () => {
 		const greeting = greet(["Amy", "Brian", "Charlotte"]);
 		expect(greeting).toBe("Hello, Amy, Brian, and Charlotte.");
 	});
+
+	it('should return "Hello, [name], [name], AND [NAME]! when given an array of names', () => {
+		const greeting = greet(["Amy", "BRIAN", "Charlotte"]);
+		expect(greeting).toBe("Hello, Amy, Charlotte, AND BRIAN!");
+	});
 })
